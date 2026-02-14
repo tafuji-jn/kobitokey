@@ -262,9 +262,9 @@
         MOUSE {
             label = "MOUSE";
             bindings = <
-&trans     &trans  &trans  &trans  &trans  &trans         &kp LC(PAGE_UP)    &trans    &trans  &trans
-&trans     &trans  &trans  &trans  &trans  &mkp_exit_AML  &mkp MB3           &mkp MB2  &mo 4   &trans
-&trans     &trans  &trans  &trans  &trans  &trans         &kp LC(PAGE_DOWN)  &trans    &trans  &trans
+&trans     &trans  &trans  &trans  &trans  &trans  &trans         &kp LC(PAGE_UP)    &trans    &trans
+&trans     &trans  &trans  &trans  &trans  &trans  &mkp_exit_AML  &mkp MB3           &mkp MB2  &mo 4
+&trans     &trans  &trans  &trans  &trans  &trans  &trans         &kp LC(PAGE_DOWN)  &trans    &trans
 &kp LSHFT  &trans  &trans  &trans  &to 0   &trans         &trans             &trans    &to 0   &kp RALT
             >;
         };
