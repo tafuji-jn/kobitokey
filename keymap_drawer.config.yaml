@@ -1,0 +1,55 @@
+draw_config:
+  key_w: 60
+  key_h: 56
+  split_gap: 30
+  combo_w: 26
+  combo_h: 22
+  key_rx: 6
+  key_ry: 6
+  n_columns: 1
+  separate_combo_diagrams: false
+  draw_key_sides: false
+
+parse_config:
+  zmk_keycode_map:
+    # JP配列変換
+    JP_DQUOTE: '"'
+    JP_AMPERSAND: "&"
+    JP_QUOTE: "'"
+    JP_EQUAL: "="
+    JP_CARET: "^"
+    JP_YEN: "¥"
+    JP_PLUS: "+"
+    JP_TILDE: "~"
+    JP_PIPE: "|"
+    JP_AT: "@"
+    JP_COLON: ":"
+    JP_ASTERISK: "*"
+    JP_BACKQUOTE: "`"
+    JP_UNDERSCORE: "_"
+    JP_LBRACKET: "["
+    JP_RBRACKET: "]"
+    JP_LPAREN: "("
+    JP_RPAREN: ")"
+    JP_LBRACE: "{"
+    JP_RBRACE: "}"
+    JP_KANA: "かな"
+    JP_EISU: "英数"
+    JP_HANZEN: "半/全"
+  zmk_behaviors:
+    mkp_exit_AML: "L Click"
+    exit_AML: "Exit AML"
+    swapper: "Alt+Tab"
+    tab_next: "Next Tab"
+    tab_prev: "Prev Tab"
+    kakko: "「」"
+    inyou: ">"
+    password1: "PW1"
+    password2: "PW2"
+    password3: "PW3"
+    password4: "PW4"
+    password5: "PW5"
+    password6: "PW6"
+    password7: "PW7"
+    password8: "PW8"
+    password9: "PW9"

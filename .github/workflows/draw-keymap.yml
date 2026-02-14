@@ -1,0 +1,15 @@
+name: Draw keymap
+on:
+  push:
+    paths:
+      - "config/KobitoKey.keymap"
+  workflow_dispatch:
+
+jobs:
+  draw:
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    with:
+      keymap_patterns: "config/KobitoKey.keymap"
+      config_path: "keymap_drawer.config.yaml"
+      output_folder: "keymap-drawer"
+      commit_changes: true
