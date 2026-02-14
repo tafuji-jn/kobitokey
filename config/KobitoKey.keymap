@@ -70,6 +70,14 @@
             toggle-mode = "off";
         };
     };
+};
+
+/* クリック後の猶予時間: この間にダブルクリックや右クリックが可能 */
+&sl {
+    release-after-ms = <3000>;
+};
+
+/ {
 
     macros {
         /* オートマウスレイヤー解除マクロ */
@@ -82,7 +90,7 @@
             bindings = <&tog_off 3>;
         };
 
-        /* 左クリック + オートマウスレイヤー解除 */
+        /* 左クリック + オートマウスレイヤー解除 + CLICKレイヤー猶予 */
 
         mkp_exit_AML: mkp_exit_AML {
             compatible = "zmk,behavior-macro";
@@ -93,7 +101,7 @@
                 = <&macro_press &mkp MB1>
                 , <&macro_pause_for_release>
                 , <&macro_release &mkp MB1>
-                , <&macro_tap &exit_AML>
+                , <&macro_tap &to 0 &sl 6>
                 ;
         };
 
@@ -293,6 +301,16 @@
             >;
 
             label = "MACRO";
+        };
+
+        CLICK {
+            label = "CLICK";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans
+            >;
         };
     };
 };
