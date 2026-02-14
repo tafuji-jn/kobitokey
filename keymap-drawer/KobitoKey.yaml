@@ -217,7 +217,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&password1'
-  - Gui+S
+  - Gui+Sft+S
   - '&password4'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
