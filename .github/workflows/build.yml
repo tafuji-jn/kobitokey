@@ -5,6 +5,8 @@ jobs:
   update-excluded-positions:
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
+    outputs:
+      changed: ${{ steps.check.outputs.changed }}
     steps:
       - uses: actions/checkout@v4
 
@@ -15,15 +17,31 @@ jobs:
       - name: Run update_excluded_positions.py
         run: python scripts/update_excluded_positions.py
 
-      - name: Commit if changed
+      - name: Check for changes
+        id: check
+        run: |
+          if git diff --quiet config/boards/shields/KobitoKey/KobitoKey_left.overlay; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push if changed
+        if: steps.check.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add config/boards/shields/KobitoKey/KobitoKey_left.overlay
-          git diff --cached --quiet || git commit -m "Auto-update excluded-positions"
-          git push || true
+          git commit -m "Auto-update excluded-positions"
+          git push
+
+      - name: Re-trigger workflow for build
+        if: steps.check.outputs.changed == 'true'
+        run: gh workflow run build.yml
+        env:
+          GH_TOKEN: ${{ github.token }}
 
   build:
     needs: update-excluded-positions
-    if: always()
+    if: always() && needs.update-excluded-positions.outputs.changed != 'true'
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
