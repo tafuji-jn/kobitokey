@@ -5,9 +5,14 @@ on:
       - "config/KobitoKey.keymap"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   draw:
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    permissions:
+      contents: write
     with:
       keymap_patterns: "config/KobitoKey.keymap"
       config_path: "keymap_drawer.config.yaml"
