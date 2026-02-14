@@ -1,7 +1,6 @@
 #include <zephyr/dt-bindings/pinctrl/nrf-pinctrl.h>
 #include "kobitokey.dtsi"
 #include <input/processors.dtsi>
-#include <behaviors/battery_history_request.dtsi>
 
 /* 列オフセット */
 &default_transform { col-offset = <5>; };
