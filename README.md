@@ -23,8 +23,6 @@
 
 | モジュール | 用途 |
 |-----------|------|
-| [zmk-pmw3610-driver](https://github.com/badjeff/zmk-pmw3610-driver) | PMW3610トラックボールドライバ |
-| [zmk-feature-sensor_rotation](https://github.com/hsgw/zmk-feature-sensor_rotation) | トラックボールの回転補正 |
 | [zmk-pointing-acceleration](https://github.com/oleksandrmaslov/zmk-pointing-acceleration) | ポインタ加速（左右トラックボール両方に適用） |
 | [zmk-tri-state](https://github.com/dhruvinsh/zmk-tri-state) | Alt+Tab / Ctrl+PgDn/PgUpスワッパー |
 
