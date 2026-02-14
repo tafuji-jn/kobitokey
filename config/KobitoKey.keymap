@@ -265,7 +265,7 @@
 &trans     &trans  &trans  &trans  &trans  &trans  &trans         &kp LC(PAGE_UP)    &trans    &trans
 &trans     &trans  &trans  &trans  &trans  &trans  &mkp_exit_AML  &mkp MB3           &mkp MB2  &mo 4
 &trans     &trans  &trans  &trans  &trans  &trans  &trans         &kp LC(PAGE_DOWN)  &trans    &trans
-&kp LSHFT  &trans  &trans  &trans  &to 0   &trans         &trans             &trans    &to 0   &kp RALT
+&kp LSHFT  &trans  &trans  &trans  &to 0   &trans  &trans         &trans             &to 0     &kp RALT
             >;
         };
 
@@ -281,10 +281,10 @@
 
         MACRO {
             bindings = <
-&trans      &trans      &trans      &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&password1  &kp LG(S)   &password4  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&password2  &password3  &password5  &password6  &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans      &trans      &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans         &trans      &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&password1  &kp LG(LS(S))  &password4  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&password2  &password3     &password5  &password6  &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans         &trans      &trans      &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "MACRO";
