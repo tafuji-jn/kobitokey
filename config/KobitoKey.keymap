@@ -5,6 +5,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 /* OS設定を日本語キーボードのまま使用するための変換定義 */
+
 #define JP_DQUOTE       AT                // "
 #define JP_AMPERSAND    CARET             // &
 #define JP_QUOTE        AMPERSAND         // '
@@ -163,8 +164,8 @@
             >;
         };
 
-        layer1 {
-            label = "NUMBER";
+        ARROW {
+            label = "ARROW";
             bindings = <
 &kp N0     &kp N1  &kp N2  &kp N3     &trans  &kp MINUS  &trans     &kp UP    &trans     &trans
 &kp EQUAL  &kp N4  &kp N5  &kp N6     &trans  &kp HOME   &kp LEFT   &kp DOWN  &kp RIGHT  &kp END
@@ -173,27 +174,27 @@
             >;
         };
 
-        layer2 {
-            label = "FUNCTION";
+        NUMBER {
+            label = "NUMBER";
             bindings = <
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp F1        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp F5
-&trans        &trans        &trans        &trans        &bt BT_CLR      &kp PERIOD    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp F10
+&trans        &kp F7        &trans        &kp F10       &bt BT_CLR      &kp PERIOD    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp F10
 &trans        &trans        &trans        &trans        &bt BT_CLR_ALL  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans
 &trans        &trans        &trans        &trans        &trans          &kp DEL       &trans        &trans        &trans        &trans
             >;
         };
 
-        layer3 {
+        MOUSE {
             label = "MOUSE";
             bindings = <
-&trans     &trans  &trans  &trans  &trans  &trans  &trans         &kp LC(PAGE_UP)    &trans    &trans
-&trans     &trans  &trans  &trans  &trans  &trans  &mkp_exit_AML  &mkp MB3           &mkp MB2  &trans
-&trans     &trans  &trans  &trans  &trans  &trans  &trans         &kp LC(PAGE_DOWN)  &trans    &trans
-&kp LSHFT  &trans  &trans  &trans  &to 0   &trans  &trans         &trans             &to 0     &kp RALT
+&trans     &trans  &trans  &trans  &trans  &trans         &kp LC(PAGE_UP)    &trans    &trans  &trans
+&trans     &trans  &trans  &trans  &trans  &mkp_exit_AML  &mkp MB3           &mkp MB2  &mo 4   &trans
+&trans     &trans  &trans  &trans  &trans  &trans         &kp LC(PAGE_DOWN)  &trans    &trans  &trans
+&kp LSHFT  &trans  &trans  &trans  &to 0   &trans         &trans             &trans    &to 0   &kp RALT
             >;
         };
 
-        layer4 {
+        SCROLL {
             label = "SCROLL";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
