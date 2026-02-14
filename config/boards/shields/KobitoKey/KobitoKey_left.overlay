@@ -92,6 +92,16 @@
         <&sensor_rotation_right>,
         <&pointer_accel>,
         <&zip_temp_layer 3 100000>; /* オートマウスレイヤーの指定とトラボ操作及びマウスボタン押下後に滞留する時間（100秒=実質無効） */
+
+    /* スクロールレイヤー: layer 4 有効時に右トラックボールをスクロールに切替 */
+    scroller {
+        layers = <4>;
+        input-processors =
+            <&sensor_rotation_right>,
+            <&pointer_accel>,
+            <&zip_xy_to_scroll_mapper>,
+            <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
+    };
 };
 
 &pointer_accel {

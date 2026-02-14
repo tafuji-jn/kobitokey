@@ -192,5 +192,15 @@
 &kp LSHFT  &trans  &trans  &trans  &to 0   &trans  &trans         &trans             &to 0     &kp RALT
             >;
         };
+
+        layer4 {
+            label = "SCROLL";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
     };
 };
