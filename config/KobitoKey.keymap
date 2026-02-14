@@ -5,32 +5,6 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-    behaviors {
-        /* Alt+Tab swapper: Shift併用で逆方向切り替え可能 */
-        swapper: swapper {
-            compatible = "zmk,behavior-tri-state";
-            #binding-cells = <0>;
-            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-            ignored-key-positions = <30 37 38>; /* LSHFT, RSHFT positions */
-        };
-
-        /* Ctrl+PageDown: 次のタブ（Shift併用で逆方向） */
-        tab_next: tab_next {
-            compatible = "zmk,behavior-tri-state";
-            #binding-cells = <0>;
-            bindings = <&kt LCTRL>, <&kp PAGE_DOWN>, <&kt LCTRL>;
-            ignored-key-positions = <30 37 38>;
-        };
-
-        /* Ctrl+PageUp: 前のタブ（Shift併用で逆方向） */
-        tab_prev: tab_prev {
-            compatible = "zmk,behavior-tri-state";
-            #binding-cells = <0>;
-            bindings = <&kt LCTRL>, <&kp PAGE_UP>, <&kt LCTRL>;
-            ignored-key-positions = <30 37 38>;
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
 

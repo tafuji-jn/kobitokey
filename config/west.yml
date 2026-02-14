@@ -7,11 +7,7 @@ manifest:
     - name: hsgw
       url-base: https://github.com/hsgw
     - name: caksoylar  # <-- led
-      url-base: https://github.com/caksoylar
-    - name: oleksandrmaslov
-      url-base: https://github.com/oleksandrmaslov
-    - name: dhruvinsh
-      url-base: https://github.com/dhruvinsh
+      url-base: https://github.com/caksoylar  
 
   projects:
     # ZMK 本体。公式の app/west.yml を取り込む
@@ -36,16 +32,6 @@ manifest:
     - name: zmk-rgbled-widget  # <-- led
       remote: caksoylar
       revision: main
-
-    # Pointing acceleration
-    - name: zmk-pointing-acceleration
-      remote: oleksandrmaslov
-      revision: main
-
-    # Tri-state (swapper)
-    - name: zmk-tri-state
-      remote: dhruvinsh
-      revision: main
-
+      
   self:
     path: config

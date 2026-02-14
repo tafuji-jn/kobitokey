@@ -2,7 +2,6 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <input/processors.dtsi>
 #include <input/processors/sensor_rotation.dtsi>
-#include <behaviors/input_gestures_accel.dtsi>
 
 &xiao_serial { status = "disabled"; };
 
@@ -69,7 +68,6 @@
 
     input-processors =
             <&sensor_rotation_left>,
-            <&pointer_accel>,
             <&zip_x_scaler 0 1>,
             <&zip_y_scaler 1 15>,
             <&zip_xy_to_scroll_mapper>,
@@ -90,22 +88,12 @@
 
     input-processors =
         <&sensor_rotation_right>,
-        <&pointer_accel>,
-        <&zip_temp_layer 3 100000>; /* オートマウスレイヤーの指定とトラボ操作及びマウスボタン押下後に滞留する時間（100秒=実質無効） */
-};
-
-&pointer_accel {
-    input-type = <INPUT_EV_REL>;
-    track-remainders;
-    min-factor = <650>;
-    max-factor = <3500>;
-    speed-threshold = <1600>;
-    speed-max = <6000>;
-    acceleration-exponent = <2>;
+        <&zip_temp_layer 3 5000>; /* オートマウスレイヤーの指定とトラボ操作及びマウスボタン押下後に滞留する時間 */
 };
 
 &zip_temp_layer {
     excluded-positions = <
+        6
         7
         8
         30
