@@ -4,10 +4,10 @@ MOUSEレイヤーのキー配置を解析し、excluded-positionsを自動更新
 対象外（オートマウスレイヤーを抜けるキー）:
   - &trans（透過）
   - &to N（レイヤー切替）
-  - &mkp MB1（左クリック）
 
-上記以外のキーはすべてexcluded-positions に含まれ、
-押してもオートマウスレイヤーに留まる。
+上記以外のキー（&mkp_exit_AML等のマクロ含む）はすべて
+excluded-positions に含まれ、押してもオートマウスレイヤーに留まる。
+※ 左クリック後のレイヤー解除は &mkp_exit_AML マクロが担当。
 """
 
 import re
@@ -32,7 +32,6 @@ MOUSE_LAYER_LABEL = "MOUSE"
 EXIT_PATTERNS = [
     r"^&trans$",
     r"^&to \d+$",
-    r"^&mkp MB1$",
 ]
 
 

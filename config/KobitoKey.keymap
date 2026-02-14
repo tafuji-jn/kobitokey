@@ -29,6 +29,33 @@
             bindings = <&kt LCTRL>, <&kp PAGE_UP>, <&kt LCTRL>;
             ignored-key-positions = <30 37 38>;
         };
+
+        /* オートマウスレイヤーをOFFにするtoggle */
+        tog_off: toggle_layer_off {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            toggle-mode = "off";
+        };
+    };
+
+    macros {
+        /* オートマウスレイヤー解除マクロ */
+        exit_AML: exit_AML {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings = <&tog_off 3>;
+        };
+
+        /* 左クリック + オートマウスレイヤー解除 */
+        mkp_exit_AML: mkp_exit_AML {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings = <&mkp MB1 &exit_AML>;
+        };
     };
 
     combos {
@@ -94,7 +121,7 @@
         layer3 {
             label = "MOUSE";
             bindings = <
-&trans     &trans  &trans    &trans    &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans     &trans  &trans    &trans    &trans  &trans  &mkp_exit_AML  &mkp MB3  &mkp MB2  &trans
 &trans     &trans  &trans    &trans    &trans  &trans  &trans    &trans    &trans    &trans
 &trans     &trans  &trans    &trans    &trans  &trans  &trans    &trans    &trans    &trans
 &kp LSHFT  &trans  &kp LCMD  &kp LALT  &to 0   &trans  &trans    &trans    &to 0     &kp RALT
