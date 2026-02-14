@@ -90,6 +90,24 @@
             bindings = <&tog_off 3>;
         };
 
+        /* CLICKレイヤー用: タブ切替 + CLICKレイヤー延長 */
+
+        click_pgup: click_pgup {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings = <&kp LC(PAGE_UP) &sl 6>;
+        };
+
+        click_pgdn: click_pgdn {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings = <&kp LC(PAGE_DOWN) &sl 6>;
+        };
+
         /* 左クリック + オートマウスレイヤー解除 + CLICKレイヤー猶予 */
 
         mkp_exit_AML: mkp_exit_AML {
@@ -306,10 +324,10 @@
         CLICK {
             label = "CLICK";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &click_pgup  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB1  &mkp MB3     &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &click_pgdn  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans    &trans
             >;
         };
     };
