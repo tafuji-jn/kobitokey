@@ -12,4 +12,4 @@ jobs:
       keymap_patterns: "config/KobitoKey.keymap"
       config_path: "keymap_drawer.config.yaml"
       output_folder: "keymap-drawer"
-      commit_changes: true
+      destination: commit
