@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: KobitoKey}
 layers:
   default:
-  - Q
+  - {t: Q, h: LEFT SHIFT}
   - L
   - U
   - COMMA
@@ -11,7 +11,7 @@ layers:
   - R
   - Y
   - P
-  - {t: E, h: LEFT SHIFT}
+  - E
   - I
   - A
   - O
