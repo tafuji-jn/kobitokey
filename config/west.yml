@@ -35,7 +35,7 @@ manifest:
     # LED
     - name: zmk-rgbled-widget  # <-- led
       remote: caksoylar
-      revision: main
+      revision: v0.3
 
     # Pointing acceleration
     - name: zmk-pointing-acceleration
