@@ -7,30 +7,30 @@ layers:
   - PERIOD
   - L
   - P
-  - W
   - R
   - Y
+  - W
   - B
   - E
   - I
   - A
   - O
   - MINUS
-  - K
+  - H
   - T
   - N
+  - K
   - S
-  - H
   - {t: V, h: LEFT SHIFT}
   - X
   - C
   - COMMA
   - F2
-  - G
+  - Z
   - D
   - M
+  - G
   - J
-  - Z
   - MACRO
   - LEFT GUI
   - BACKSPACE
