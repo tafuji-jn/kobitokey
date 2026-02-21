@@ -2,34 +2,34 @@ layout: {zmk_keyboard: KobitoKey}
 layers:
   default:
   - {t: Q, h: LEFT SHIFT}
-  - J
-  - E
-  - COMMA
-  - PERIOD
   - F
+  - U
+  - PERIOD
+  - L
+  - P
+  - W
   - R
   - Y
-  - H
   - B
-  - U
+  - E
   - I
   - A
   - O
-  - L
-  - W
+  - MINUS
+  - K
   - T
   - N
-  - K
   - S
+  - H
   - {t: V, h: LEFT SHIFT}
   - X
   - C
-  - MINUS
+  - COMMA
   - F2
-  - P
+  - G
   - D
   - M
-  - G
+  - J
   - Z
   - MACRO
   - LEFT GUI
