@@ -4,19 +4,19 @@ layers:
   - {t: Q, h: LEFT SHIFT}
   - F
   - U
-  - PERIOD
+  - COMMA
   - L
-  - P
+  - Z
   - R
   - Y
-  - W
-  - B
+  - H
+  - P
   - E
   - I
   - A
   - O
   - MINUS
-  - H
+  - W
   - T
   - N
   - K
@@ -24,13 +24,13 @@ layers:
   - {t: V, h: LEFT SHIFT}
   - X
   - C
-  - COMMA
+  - PERIOD
   - F2
-  - Z
+  - J
   - D
   - M
   - G
-  - J
+  - B
   - MACRO
   - LEFT GUI
   - BACKSPACE
