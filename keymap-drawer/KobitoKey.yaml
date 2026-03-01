@@ -6,31 +6,31 @@ layers:
   - U
   - COMMA
   - L
-  - P
+  - Z
+  - W
   - R
   - Y
-  - H
-  - J
+  - P
   - E
   - I
   - A
   - O
   - MINUS
-  - W
+  - K
   - T
   - N
-  - K
   - S
+  - H
   - {t: V, h: LEFT SHIFT}
   - X
   - C
   - PERIOD
   - F2
-  - B
+  - G
   - D
   - M
-  - G
-  - Z
+  - J
+  - B
   - MACRO
   - LEFT GUI
   - BACKSPACE
