@@ -42,9 +42,9 @@ layers:
   - RSHFT
   - {t: SLASH, h: LALT}
   ARROW:
-  - '0'
-  - '1'
-  - '2'
+  - UNDER
+  - AT
+  - AMPERSAND
   - '3'
   - {t: ▽, type: trans}
   - MINUS
@@ -52,9 +52,9 @@ layers:
   - UP
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - EQUAL
-  - '4'
-  - '5'
+  - COLON
+  - DOUBLE QUOTES
+  - SINGLE QUOTE
   - '6'
   - {t: ▽, type: trans}
   - HOME
@@ -62,9 +62,9 @@ layers:
   - DOWN
   - RIGHT
   - END
-  - {t: ▽, type: trans}
+  - MINUS
   - '7'
-  - '8'
+  - SEMICOLON
   - '9'
   - {t: ▽, type: trans}
   - ASTRK
