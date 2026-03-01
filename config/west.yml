@@ -12,6 +12,8 @@ manifest:
       url-base: https://github.com/oleksandrmaslov
     - name: dhruvinsh
       url-base: https://github.com/dhruvinsh
+    - name: tafuji-jn
+      url-base: https://github.com/tafuji-jn
 
   projects:
     # ZMK 本体。公式の app/west.yml を取り込む
@@ -46,6 +48,12 @@ manifest:
     - name: zmk-tri-state
       remote: dhruvinsh
       revision: main
+
+    # Prospector Status GATT サービス
+    - name: prospector-zmk-module
+      remote: tafuji-jn
+      revision: main
+      path: modules/prospector-zmk-module
 
   self:
     path: config
